@@ -9,16 +9,16 @@ function getComputerChoice() {
 
 //action to compare player and computer choice
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection === rock && computerSelection === scissors || playerSelection === paper && computerSelection === rock || playerSelection === scissors && computerSelection === paper) {
-        console.log(`You win! ${playerSelection} beats ${computerSelection}`);
-    } else if (playerSelection === scissors && computerSelection === rock || playerSelection === rock && computerSelection === paper || playerSelection === paper && computerSelection === scissors) {
-        console.log(`You lose ${computerSelection} beats ${playerSelection}`);
+    if (playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper') {
+        return `You win! ${playerSelection} beats ${computerSelection}`;
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock' || playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'scissors') {
+        return `You lose ${computerSelection} beats ${playerSelection}`;
     } else {
-        console.log('You draw')
+        return 'You draw'
     }
 }
 
-let playerSelection = prompt('Please enter random choice').toLowerCase();
+let playerSelection = prompt('Please enter a random choice');
 
 let computerSelection = getComputerChoice();
 
